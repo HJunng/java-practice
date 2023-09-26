@@ -118,5 +118,17 @@ public class Main {
         /**
          *  하위 과제 02: MyLinkedList를 이용해서 Queue와 Stack을 구현해봅시다.
          */
+
+        MyLinkedList<Integer> queue = new MyLinkedList<>();
+        queue.add(1); queue.add(2); queue.add(3);
+        // 1, 2, 3
+
+        for(int i=0;i<queue.size;i++) System.out.println(queue.get(i));
+
+        MyLinkedList<String> stack = new MyLinkedList<>();
+        stack.add("안"); stack.add("녕");
+        // 녕, 안
+
+        for(int i=stack.size-1;i>=0;i--) System.out.println(stack.get(i));
     }
 }
