@@ -41,6 +41,47 @@ public class Main {
         }
     }
 
+    class CartItem{
+        private Product product;
+        private int quantity;
+
+        public CartItem(Product product, int quantity){
+            this.product=product;
+            this.quantity=quantity;
+        }
+        public Product getProduct(){
+            return product;
+        }
+
+        public void setQuantity(int quantity) {
+            this.quantity = quantity;
+        }
+
+        public int getQuantity() {
+            return quantity;
+        }
+    }
+    class Cart{
+        private List<CartItem> items = new ArrayList<>();
+
+        public void addProduct(Product product, int quantity){
+            // 기존에 있던 아이템이면 갯수 추가.
+            for(CartItem item : items){
+                if(item.getProduct().getKey() == product.getKey()){
+                    item.setQuantity(item.getQuantity()+quantity);
+                    return;
+                }
+            }
+            // 새로운 아이템이면 list에 추가.
+            items.add(new CartItem(product,quantity));
+        }
+        public void removeProduct(Product product){
+            items.removeIf(item -> item.getProduct().getKey() == product.getKey());
+        }
+        public List<CartItem> getItems(){
+            return items;
+        }
+    }
     public static void main(String[] args) {
 
         //상품 목록 생성
