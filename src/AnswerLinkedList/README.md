@@ -12,6 +12,7 @@
     - next
   - Head
   - 맨 마지막 Node의 next는 NULL
+  
   ![스크린샷 2023-10-05 오전 11.13.36.png](..%2F..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2Fb8%2Fw6xh9vts089683nl6prvt8nm0000gn%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_ambe9e%2F%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202023-10-05%20%EC%98%A4%EC%A0%84%2011.13.36.png)
   - https://www.geeksforgeeks.org/data-structures/linked-list/
    
